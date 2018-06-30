@@ -6,3 +6,7 @@
   </div>
 
 <% end %>
+
+<div class="flickr_pagination pagination">
+   <%= will_paginate @places, renderer: BootstrapPagination::Rails %>
+ </div>
