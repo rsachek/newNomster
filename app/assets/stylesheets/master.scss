@@ -11,7 +11,7 @@
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   margin-top: 10px;
   margin-bottom: 15px;
-  padding: 20px;
+  padding: 20px 20px 40px 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -27,6 +27,27 @@ body {
 .navbar {
   background: image_url('tex2res4_@2X.png');
   box-shadow: 3px 3px 6px #000000;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
 }
 
 .navbar-inverse .navbar-brand {
