@@ -87,7 +87,7 @@
   <% end %> 
 </div>
 
-<!-- Modal -->
+<!-- Photo Modal -->
 <div class="modal fade" id="picModal" tabindex="-1" role="dialog" aria-labelledby="picModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -97,13 +97,14 @@
         </button>
         <h4 class="modal-title" id="picModalLabel">Add a Photo</h4>
       </div>
+      <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
       <div class="modal-body">
-        <%= simple_form_for @photo, url: '#' do |f| %>
+        <%= f.input :picture %>
         <%= f.input :caption %>
       </div>
         <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <%= f.submit "Post Comment", class: 'btn btn-primary' %>
+        <%= f.submit "Post Photo", class: 'btn btn-primary' %>
       </div>
     
     <% end %>
@@ -113,11 +114,17 @@
 <div class="row">
   <div class="col-12">
     <h1 class="float-left">Photos</h1>
-<!-- Button trigger modal -->
+<!-- Photo Button trigger modal -->
 <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#picModal">
   Add a Photo
 </button>
 </div>
 </div>
+
+<% @place.photos.each do |photo| %>
+  <%= image_tag photo.picture %>
+  <br />
+  <%= photo.caption %>
+<% end %>
 
 
