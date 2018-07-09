@@ -1,10 +1,16 @@
 <% @places.each do |place| %>
   <div class="booyah-box col-10 offset-1">
-    <h1><%= link_to place.name, place_path(place) %></h1>
-    <% if place.photos.present? %>
-    <p><%= image_tag place.photos.first.picture %></p><br />
-    <% end %>
+    <div class="row">
+    <div class="col-5"><h1><%= link_to place.name, place_path(place) %></h1>
     <i><%= place.address %></i><br /><br />
+    </div>
+    <div class="col-5">
+      <% if place.photos.present? %>
+    <p><%= image_tag place.photos.first.picture, class:"indexPhoto" %></p><br />
+    <% end %>
+
+    </div>
+    </div>
     <p><%= place.description %></p><br />
 
     <% if place.user.present? %>
@@ -28,3 +34,5 @@
 <div class="flickr_pagination pagination">
    <%= will_paginate @places, renderer: BootstrapPagination::Rails %>
  </div>
+
+ 
