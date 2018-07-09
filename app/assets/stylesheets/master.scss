@@ -11,12 +11,27 @@
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   margin-top: 10px;
   margin-bottom: 15px;
-  padding: 20px 20px 40px 20px;
+}
+
+.booyah-box-show {
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 20px 20px 60px 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin:0;
   padding:0;
+}
+
+.showPic {
+  height: 300px;
 }
 
 body {
@@ -102,4 +117,3 @@ blockquote p {
     margin-right: 1em; }
   .flickr_pagination .next_page {
     margin-left: 1em; }
-

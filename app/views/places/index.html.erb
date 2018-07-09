@@ -1,6 +1,9 @@
 <% @places.each do |place| %>
   <div class="booyah-box col-10 offset-1">
     <h1><%= link_to place.name, place_path(place) %></h1>
+    <% if place.photos.present? %>
+    <p><%= image_tag place.photos.first.picture %></p><br />
+    <% end %>
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />
 
